@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useRef } from "react";
 import { useRecoilState } from "recoil";
 import { modalSate } from "./../atoms/modalAtom";
-import { CameraIcon } from "@heroicons/react/outline";
+import { CameraIcon } from "@heroicons/react";
 import {
   addDoc,
   collection,
