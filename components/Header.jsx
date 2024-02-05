@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { useSession, signIn } from "next-auth/react";
-import {
-  SearchIcon,
-  MenuIcon,
-  PaperAirplaneIcon,
-  PlusCircleIcon,
-  UserGroupIcon,
-  HeartIcon,
-} from "@heroicons/react/outline";
+import { SearchIcon, MenuIcon, PaperAirplaneIcon, PlusCircleIcon, UserGroupIcon, HeartIcon } from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
 import { useRecoilState } from "recoil";
 import { modalSate } from "./../atoms/modalAtom";
@@ -65,17 +58,13 @@ function Header() {
                   3
                 </div>
               </div>
-              <PlusCircleIcon
-                onClick={() => setOpen(true)}
-                className="navBtn"
-              />
+              <PlusCircleIcon onClick={() => setOpen(true)} className="navBtn" />
               <UserGroupIcon className="navBtn" />
               <HeartIcon className="navBtn" />
-              <img
-                src={session?.user?.image}
-                alt="profile pic"
-                className="h-10 rounded-full w-10 cursor-pointer"
-              />
+              
+
+              
+              <img src={session?.user?.image} alt="profile pic" className="h-10 rounded-full w-10 cursor-pointer" />
             </>
           ) : (
             <button onClick={signIn}>Sign In</button>
